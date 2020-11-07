@@ -1,8 +1,12 @@
+using StrategyPattern.Behaviors;
+
 namespace StrategyPattern 
 {
     
     internal abstract class Duck
     {
+        protected IFlyBehavior FlyBehavior;
+
         public void Quack(){
             System.Console.WriteLine("All Ducks Go Quack!");
         }
@@ -12,7 +16,7 @@ namespace StrategyPattern
         }
 
         public void Fly(){
-            System.Console.WriteLine("I'm flying!!");
+            FlyBehavior.Fly();
         }
 
         public abstract void Display();
