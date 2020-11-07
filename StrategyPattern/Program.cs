@@ -9,10 +9,10 @@ namespace StrategyPattern
             Duck mallardDuck = new Ducks.MallardDuck();
             runDuck("Mallard", mallardDuck);
 
-            Duck redheadDuck = new Ducks.MallardDuck();
+            Duck redheadDuck = new Ducks.ReadheadDuck();
             runDuck("Redhead", redheadDuck);
 
-            Duck rubberDuck = new Ducks.MallardDuck();
+            Duck rubberDuck = new Ducks.RubberDuck();
             runDuck("Rubber", rubberDuck);
         }
 
