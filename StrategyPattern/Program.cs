@@ -21,6 +21,7 @@ namespace StrategyPattern
             duck.Display();
             duck.Quack();
             duck.Swim();
+            duck.Fly();
             Console.WriteLine("Simmulation Complete\n\n\n");
         }
     }

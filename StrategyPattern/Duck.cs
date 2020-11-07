@@ -11,6 +11,10 @@ namespace StrategyPattern
             System.Console.WriteLine("Swim, swim swim!");
         }
 
+        public void Fly(){
+            System.Console.WriteLine("I'm flying!!");
+        }
+
         public abstract void Display();
     }
 }
