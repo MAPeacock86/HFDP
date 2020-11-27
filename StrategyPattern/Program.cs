@@ -14,6 +14,10 @@ namespace StrategyPattern
 
             Duck rubberDuck = new Ducks.RubberDuck();
             runDuck("Rubber", rubberDuck);
+
+            Duck modelDuck = new Duck.ModelDuck();
+            modelDuck.SetFlyBehavior(new FlyRocketPowered());
+            runDuck("Model", modelDuck);
         }
 
         private static void runDuck(string name, Duck duck){
