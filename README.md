@@ -16,6 +16,8 @@ These are my notes and a dotNet work-through of the book [Head First Design Patt
 ---
 
 ## Captains Log
+2021-01-10: Finished Chapter 1! 
+
 2020-11-26: Been a few weeks, had finals to take! Tonight I wrote part of the write-up for the Strategy Pattern. Excited to move towards wrapping that up soon. 
 
 2020-11-06: I will now embark on my 1,001st attempt at coding my way through Head First Design Patterns and 

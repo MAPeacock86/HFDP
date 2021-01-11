@@ -26,3 +26,7 @@ It might be tempting to just switch fly to be an abstract method and have each c
 To solve this with the strategy pattern, we define a new interface called IFlyBehavior that defines a single method Fly. This is the "family of algorithms" whose behaviors we want to separate from the "clients that use it" (in this case, each duck type is a client). 
 
 The updated code can be found here: https://github.com/N3rdyM1k3/HFDP/tree/strategy-pattern-part-one/StrategyPattern
+
+### Changing Behavior at Runtime
+We can take this pattern one step further and allow for the behavior of a duck to be set at runtime. We achieve this by adding a method SetFlyBehavior and we call it at runtime for the ModelDuck: https://github.com/N3rdyM1k3/HFDP/tree/strategy-pattern-part-two
+
