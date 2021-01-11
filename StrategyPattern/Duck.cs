@@ -18,7 +18,11 @@ namespace StrategyPattern
         public void Fly(){
             FlyBehavior.Fly();
         }
-
+      
+        public void SetFlyBehavior(IFlyBehavior flyBehavior){
+            FlyBehavior = flyBehavior;
+        }
+      
         public abstract void Display();
     }
 }
