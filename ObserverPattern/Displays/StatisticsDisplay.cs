@@ -20,6 +20,7 @@ namespace ObserverPattern.Displays {
             updateMaxTemp(temperature);
             updateMinTemp(temperature);
             updateAvgTemp(temperature);
+            display();
         }
 
         private void updateMaxTemp(float newTemp){
@@ -40,7 +41,7 @@ namespace ObserverPattern.Displays {
             _counter++;
             _avgTemp = (pastValue + temperature) / _counter;
         }
-        internal void Display(){
+        private void display(){
             System.Console.WriteLine($"Avg/Max/Min temperatue: {_avgTemp}/{_maxTemp}/{_minTemp}");
         }
 

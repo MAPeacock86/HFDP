@@ -16,9 +16,10 @@ namespace ObserverPattern.Displays {
                 "More of the same" };
             var forecastIndex = new Random((int)DateTime.Now.Ticks).Next(3);
             _forecast = forecasts[forecastIndex];
+            display();
         }
 
-        internal void Display(){
+        private void display(){
             System.Console.WriteLine($"Forecast: {_forecast}");
         }
 

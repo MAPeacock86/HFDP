@@ -10,9 +10,10 @@ namespace ObserverPattern.Displays {
             _temperature = temperature;
             _humidity = humidity;
             _pressure = pressure;
+            display();
         }
 
-        internal void Display(){
+        private void display(){
             System.Console.WriteLine($"Current conditions: {_temperature}F degress and {_humidity}% hummidity");
         }
 
