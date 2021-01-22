@@ -21,3 +21,5 @@ The observer pattern losely couples the subject and the observers using two inte
 
 The updated code can be found here: https://github.com/N3rdyM1k3/HFDP/tree/observer-pattern-part-one/
 
+The book then walks throught the native implementation of the observer pattern in Java. I will do the equivalent for c#. More information can be found here: 
+https://docs.microsoft.com/en-us/dotnet/standard/events/observer-design-pattern
