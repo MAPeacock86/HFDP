@@ -2,12 +2,16 @@ using System;
 
 namespace ObserverPattern.Displays {
 
-    internal class StatisticsDisplay{
+    internal class StatisticsDisplay : IWeatherObserver{
 
         private float _avgTemp;
         private float _minTemp;
         private float _maxTemp;
         private int _counter;
+
+        internal StatisticsDisplay(IWeatherSubject weatherData){
+            weatherData.RegisterObserver(this);
+        }
 
         internal StatisticsDisplay(){
             _minTemp = float.MaxValue;
@@ -16,7 +20,7 @@ namespace ObserverPattern.Displays {
             _counter = 0;
         }
 
-        internal void Update(float temperature, float humidity, float pressure){
+        public void Update(float temperature, float humidity, float pressure){
             updateMaxTemp(temperature);
             updateMinTemp(temperature);
             updateAvgTemp(temperature);

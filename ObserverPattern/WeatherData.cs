@@ -1,19 +1,18 @@
+using System.Collections.Generic;
+using ObserverPattern.Displays;
+
 namespace ObserverPattern{
 
-    internal class WeatherData{
+    internal class WeatherData : IWeatherSubject {
 
         private float _temperature;
         private float _humidity;
         private float _pressure;
 
-        private Displays.CurrentConditionsDisplay _currentConditionsDisplay;
-        private Displays.ForecastDisplay _forecastDispaly;
-        private Displays.StatisticsDisplay _statisticsDisplay;
+        private List<IWeatherObserver> _observers;
 
         internal WeatherData(){
-            _currentConditionsDisplay = new Displays.CurrentConditionsDisplay();
-            _forecastDispaly = new Displays.ForecastDisplay();
-            _statisticsDisplay = new Displays.StatisticsDisplay();
+            _observers = new List<IWeatherObserver>();
         }
 
         public void SetMeasurements(float temperature, float humidity, float pressure){
@@ -27,10 +26,7 @@ namespace ObserverPattern{
             var temp = GetTemperature();
             var humidity = GetHumidity();
             var pressure = GetPressure();
-            _currentConditionsDisplay.Update(temp, humidity, pressure);
-            _statisticsDisplay.Update(temp, humidity, pressure);
-            _forecastDispaly.Update(temp, humidity, pressure);
-
+            NotifyObservers();
         }
 
         internal float GetTemperature(){
@@ -45,5 +41,21 @@ namespace ObserverPattern{
             return _pressure;
         }
 
+        public void RegisterObserver(IWeatherObserver observer)
+        {
+            _observers.Add(observer);
+        }
+
+        public void RemoveObserver(IWeatherObserver observer)
+        {
+            _observers.Remove(observer); 
+        }
+
+        public void NotifyObservers()
+        {
+            foreach (var o in _observers){
+                o.Update(_temperature, _humidity, _pressure);
+            }
+        }
     }
 }

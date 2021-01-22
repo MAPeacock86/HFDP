@@ -18,6 +18,8 @@ These are my notes and a dotNet work-through of the book [Head First Design Patt
 ---
 
 ## Captains Log
+2021-01-22: Finished part 1 of the observer pattern
+
 2021-01-10: Finished Chapter 1 and finished the initial setup for chapter 2! 
 
 2020-11-26: Been a few weeks, had finals to take! Tonight I wrote part of the write-up for the Strategy Pattern. Excited to move towards wrapping that up soon. 

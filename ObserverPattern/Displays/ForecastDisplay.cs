@@ -3,12 +3,16 @@ using System.Collections.Generic;
 
 namespace ObserverPattern.Displays {
 
-    internal class ForecastDisplay{
+    internal class ForecastDisplay : IWeatherObserver {
 
         private string _forecast;
 
+        internal ForecastDisplay(IWeatherSubject weatherData){
+            weatherData.RegisterObserver(this);
+        }
 
-        internal void Update(float temperature, float humidity, float pressure){
+
+        public void Update(float temperature, float humidity, float pressure){
             // TODO: Replace random logic with predictive model :D 
             var forecasts = new List<string>(){
                 "Improving weather on the way", 
