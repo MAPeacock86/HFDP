@@ -13,6 +13,8 @@ These are my notes and a dotNet work-through of the book [Head First Design Patt
 ## Design Patterns
 [Strategy Pattern](https://github.com/N3rdyM1k3/HFDP/tree/master/StrategyPattern)
 
+[Observer Pattern](https://github.com/N3rdyM1k3/HFDP/tree/master/ObserverPattern)
+
 ---
 
 ## Captains Log
